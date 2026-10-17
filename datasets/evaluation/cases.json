@@ -27,7 +27,7 @@
         "mappings": ["PR.AA-05", "CIS 12"]
       }
     ],
-    "expected conflicts": [
+    "expected_conflicts": [
       [
         "Remote employees may access the finance portal from external networks when approved.",
         "Remote employees must not access the finance portal from external networks."
