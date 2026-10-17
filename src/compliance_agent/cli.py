@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import argparse
+import argparses
 import unicodedata
 from datetime import datetime
 from pathlib import Path
