@@ -1,0 +1,3 @@
+Remote employees may access the finance portal from external networks when approved.
+Remote employees must not access the finance portal from external networks.
+Third-party vendors should use secure methods to access financial systems.

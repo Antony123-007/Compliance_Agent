@@ -1,0 +1,37 @@
+[
+  {
+    "name": "access-control-sample",
+    "input_file": "policies/access_control.txt",
+    "expected_requirements": [
+      {
+        "normalized_statement": "Restrict management interface access to authorized administrators only.",
+        "mappings": ["PR.AA-05", "CIS 6"]
+      },
+      {
+        "normalized_statement": "Prevent employees from accessing the production database directly from external networks.",
+        "mappings": ["CIS 12", "PR.AA-05"]
+      }
+    ],
+    "expected_conflicts": []
+  },
+  {
+    "name": "policy-conflict-sample",
+    "input_file": "policies/conflict_policy.txt",
+    "expected_requirements": [
+      {
+        "normalized_statement": "Remote employees may access the finance portal from external networks when approved.",
+        "mappings": ["PR.AA-03", "CIS 6"]
+      },
+      {
+        "normalized_statement": "Remote employees must not access the finance portal from external networks.",
+        "mappings": ["PR.AA-05", "CIS 12"]
+      }
+    ],
+    "expected conflicts": [
+      [
+        "Remote employees may access the finance portal from external networks when approved.",
+        "Remote employees must not access the finance portal from external networks."
+      ]
+    ]
+  }
+]

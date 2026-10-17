@@ -1,0 +1,3 @@
+Only authorized administrators may access management interfaces.
+Employees must not access the production database directly from external networks.
+Sensitive systems shaould be adequately protected.
