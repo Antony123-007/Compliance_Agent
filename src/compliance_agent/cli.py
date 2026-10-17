@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 from textwrap import shorten
@@ -144,19 +145,19 @@ def _default_output_dir(input_path: Path) -> Path:
 
 
 def _print_banner() -> None:
-    print(f"{Fore.CYAN}Compliance Agent v{__version__}{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}Structured policy extraction and control mapping{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}▶ Compliance Agent v{__version__}{Style.RESET_ALL}")
+    print(f"{Fore.CYAN}  Structured policy extraction and control mapping{Style.RESET_ALL}")
     print()
 
 
 def _print_progress(step: int, total: int, label: str) -> None:
-    print(f"{Fore.BLUE}[{step}/{total}] {label}{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}• [{step}/{total}] {label}{Style.RESET_ALL}")
 
 
 def _print_header(title: str) -> None:
     line = "=" * max(len(title) + 6, 28)
     print(f"{Fore.CYAN}{line}{Style.RESET_ALL}")
-    print(f"{Fore.CYAN}= {title} ={Style.RESET_ALL}")
+    print(f"{Fore.CYAN}≡ {title} ≡{Style.RESET_ALL}")
     print(f"{Fore.CYAN}{line}{Style.RESET_ALL}")
 
 
@@ -166,7 +167,7 @@ def _print_kv(label: str, value: str) -> None:
 
 def _print_metric(label: str, value: float) -> None:
     color = Fore.GREEN if value >= 0.9 else Fore.YELLOW if value >= 0.75 else Fore.RED
-    icon = "✓" if value >= 0.9 else "⚠" if value >= 0.75 else "✗"
+    icon = "✅" if value >= 0.9 else "⚠" if value >= 0.75 else "❌"
     print(f"{icon} {label:<26} {color}{value:.3f}{Style.RESET_ALL}")
 
 
@@ -191,17 +192,17 @@ def _print_run_snapshot(document, export_report) -> None:
     review_flags = _count_review_flags(requirements)
     issue_count = len(export_report.issues)
     status_text = "PASS" if not issue_count else "CHECK"
-    status_icon = "✓" if not issue_count else "⚠"
-    export_icon = "✓" if not issue_count else "⚠"
+    status_icon = "✅" if not issue_count else "⚠"
+    export_icon = "✅" if not issue_count else "⚠"
 
     rows = [
-        f"{status_icon} Validation   {status_text}",
-        f"  Mappings     {mappings}",
-        f"  Review flags {review_flags}",
-        f"  Requirements {len(requirements)}",
-        f"{export_icon} Export       {'OK' if not issue_count else 'issues found'}",
+        f"{status_icon} Validation {status_text}",
+        f"🧩 Mappings {mappings}",
+        f"📝 Review flags {review_flags}",
+        f"📄 Requirements {len(requirements)}",
+        f"{export_icon} Export {'OK' if not issue_count else 'issues found'}",
     ]
-    width = max(len(row) for row in rows) + 4
+    width = max(_display_width(row) for row in rows) + 4
     border = "┌" + "─" * width + "┐"
 
     print()
@@ -215,7 +216,7 @@ def _print_run_snapshot(document, export_report) -> None:
     print(f"{Fore.CYAN}├" + "─" * width + f"┤{Style.RESET_ALL}")
     for row in rows:
         print(
-            f"{Fore.CYAN}│{Style.RESET_ALL} {row:<{width - 2}} {Fore.CYAN}│{Style.RESET_ALL}"
+            f"{Fore.CYAN}│{Style.RESET_ALL} {_pad_display(row, width - 2)} {Fore.CYAN}│{Style.RESET_ALL}"
         )
     print(f"{Fore.CYAN}└" + "─" * width + f"┘{Style.RESET_ALL}")
 
@@ -303,8 +304,8 @@ def _requirement_status(
     if needs_review or ambiguity_flags or confidence < 0.75:
         return ("Review", "⚠")
     if confidence >= 0.9:
-        return ("Strong", "✓")
-    return ("Moderate", "•")
+        return ("Strong", "✅")
+    return ("Moderate", "ℹ")
 
 
 def _count_mappings(requirements) -> int:
@@ -317,6 +318,20 @@ def _count_review_flags(requirements) -> int:
         for requirement in requirements
         if requirement.needs_human_review or requirement.ambiguity_flags
     )
+
+
+def _display_width(text: str) -> int:
+    """Return how many terminal columns the text occupies (emoji count as 2)."""
+    width = 0
+    for char in text:
+        if unicodedata.combining(char) or char in "\u200d\ufe0f":
+            continue
+        width += 2 if unicodedata.east_asian_width(char) in ("W", "F") else 1
+    return width
+
+
+def _pad_display(text: str, width: int) -> str:
+    return text + " " * max(width - _display_width(text), 0)
 
 
 def _box_top(widths: list[int]) -> str:
@@ -337,9 +352,9 @@ def _box_row(
     padded = []
     for value, width in zip(values, widths):
         if header:
-            padded.append(f" {Style.BRIGHT}{value:<{width}}{Style.RESET_ALL} ")
+            padded.append(f" {Style.BRIGHT}{_pad_display(value, width)}{Style.RESET_ALL} ")
         else:
-            padded.append(f" {color}{value:<{width}}{Style.RESET_ALL} ")
+            padded.append(f" {color}{_pad_display(value, width)}{Style.RESET_ALL} ")
     return "│" + "│".join(padded) + "│"
 
 

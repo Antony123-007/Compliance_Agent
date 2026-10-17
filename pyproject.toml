@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compliance-agent"
+version = "0.1.0"
+description = "LLM-based compliance policy interpretation and security control mapping"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.51.0",
+    "pydantic>=2.9.2",
+    "PyYAML>=6.0.2",
+    "pypdf>=5.0.1",
+    "python-dotenv>=1.0.1",
+    "colorama>=0.4.6",
+    "python-docx>=1.1.2",
+    "pywin32>=308; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.3",
+]
+
+[project.scripts]
+compliance-agent = "compliance_agent.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
