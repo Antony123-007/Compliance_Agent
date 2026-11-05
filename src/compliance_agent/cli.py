@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import argparses
+import argparse
 import unicodedata
 from datetime import datetime
 from pathlib import Path
@@ -16,6 +16,7 @@ from compliance_agent.config import (
     default_model,
     load_environment,
 )
+from compliance_agent.engine import ComplianceScoringEngine
 from compliance_agent.evaluation import evaluate_dataset
 from compliance_agent.exporters import export_document
 from compliance_agent.llm import LLMClient, LLMRequestError, LLMResponseError, LLMSettings
@@ -67,10 +68,55 @@ def main() -> None:
     eval_parser.add_argument("--base-url", default=default_base_url())
     eval_parser.add_argument("--api-key-env", default=default_api_key_env())
 
+    score_parser = subparsers.add_parser(
+        "score",
+        help="Score the policy posture of a document using the built-in compliance engine.",
+    )
+    score_parser.add_argument(
+        "--input", dest="input_path", help="Path to a .txt, .pdf, .docx, or .doc file."
+    )
+    score_parser.add_argument(
+        "--model", default=default_model(), help="OpenAI or compatible model name."
+    )
+    score_parser.add_argument(
+        "--base-url",
+        default=default_base_url(),
+        help="OpenAI-compatible base URL for local runtimes such as Ollama.",
+    )
+    score_parser.add_argument(
+        "--api-key-env",
+        default=default_api_key_env(),
+        help="Environment variable holding the API key.",
+    )
+
     args = parser.parse_args()
     command = args.command or "extract"
 
     try:
+        if command == "score":
+            input_path = (
+                Path(args.input_path)
+                if args.input_path
+                else Path(input("Enter the policy file path: ").strip())
+            )
+            settings = LLMSettings(
+                model=args.model, base_url=args.base_url, api_key_env=args.api_key_env
+            )
+            client = LLMClient(settings)
+            document = run_pipeline(input_path, client)
+            engine = ComplianceScoringEngine()
+            result = engine.score_document(document)
+
+            _print_header("Compliance Risk Score")
+            _print_kv("Input", str(input_path))
+            _print_kv("Risk score", f"{result.overall_score:.2f}/100")
+            _print_kv("Risk level", result.risk_level.upper())
+            _print_kv("Coverage gap", f"{100.0 - result.coverage_score:.2f}%")
+            _print_kv("Clarity gap", f"{100.0 - result.clarity_score:.2f}%")
+            _print_kv("Priority exposure", f"{result.priority_score:.2f}%")
+            _print_kv("Evidence gap", f"{100.0 - result.evidence_score:.2f}%")
+            return
+
         if command == "evaluate":
             settings = LLMSettings(
                 model=args.model, base_url=args.base_url, api_key_env=args.api_key_env
@@ -118,6 +164,13 @@ def main() -> None:
         _print_kv("Model", settings.model)
         _print_kv("JSON", str(json_path))
         _print_kv("YAML", str(yaml_path))
+
+        engine = ComplianceScoringEngine()
+        score_result = engine.score_document(document)
+        _print_kv("Risk score", f"{score_result.overall_score:.2f}/100")
+        _print_kv("Risk level", score_result.risk_level.upper())
+        _print_kv("Coverage gap", f"{100.0 - score_result.coverage_score:.2f}%")
+        _print_kv("Clarity gap", f"{100.0 - score_result.clarity_score:.2f}%")
 
         for line in validation_summary_lines(document):
             _print_status_line(line)
