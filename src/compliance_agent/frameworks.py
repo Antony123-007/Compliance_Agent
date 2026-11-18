@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from collections import defaultdict
 
+from compliance_agent.control_db import load_framework_controls
 from compliance_agent.models import ControlMapping, FrameworkControl, SecurityRequirement
 
 FRAMEWORK_CATALOG: list[FrameworkControl] = [
@@ -178,7 +179,7 @@ FRAMEWORK_CATALOG: list[FrameworkControl] = [
 
 
 def catalog_by_key() -> dict[tuple[str, str], FrameworkControl]:
-    return {(control.framework, control.control_id): control for control in FRAMEWORK_CATALOG}
+    return {(control.framework, control.control_id): control for control in _active_catalog()}
 
 
 def catalog_summary() -> list[dict[str, str]]:
@@ -190,7 +191,7 @@ def catalog_summary() -> list[dict[str, str]]:
             "title": control.title,
             "summary": control.summary,
         }
-        for control in FRAMEWORK_CATALOG
+        for control in _active_catalog()
     ]
 
 
@@ -214,7 +215,7 @@ def suggest_mappings(requirement: SecurityRequirement, limit: int = 3) -> list[C
     tokens = _tokenize(search_text)
 
     scored: dict[int, list[FrameworkControl]] = defaultdict(list)
-    for control in FRAMEWORK_CATALOG:
+    for control in _active_catalog():
         score = len(
             tokens.intersection(
                 _tokenize(" ".join(control.tags + [control.title, control.summary]))
@@ -241,3 +242,6 @@ def suggest_mappings(requirement: SecurityRequirement, limit: int = 3) -> list[C
                 return mappings
 
     return mappings
+
+def _active_catalog() -> list[FrameworkControl]:
+    return load_framework_controls(fallback=FRAMEWORK_CATALOG)

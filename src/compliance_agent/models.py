@@ -84,6 +84,23 @@ class FrameworkControl(BaseModel):
     summary: str
     tags: list[str]
 
+class NormalizedControl(BaseModel):
+    framework: str
+    version: str
+    control_id: str
+    title: str
+    description: str
+    category: str | None = None
+    recommendation: str | None = None
+    source: str
+    tags: list[str] = Field(default_factory=list)
+
+
+class FrameworkCatalogSnapshot(BaseModel):
+    built_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    source_files: list[str] = Field(default_factory=list)
+    controls: list[NormalizedControl] = Field(default_factory=list)
 
 class ExtractionEnvelope(BaseModel):
     requirements: list[SecurityRequirement]
+

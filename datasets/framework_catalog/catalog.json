@@ -1,0 +1,1773 @@
+{
+  "built_at": "2026-11-18T14:42:11.161561Z",
+  "source_files": [
+    "C:\\Users\\venua\\OneDrive\\Documents\\Personal Project\\Compliance_Agent\\datasets\\framework_sources\\NIST.CSWP.29.pdf"
+  ],
+  "controls": [
+    {
+      "framework": "CIS Controls",
+      "version": "8.1",
+      "control_id": "CIS 02",
+      "title": "o ID.IM-02: Improvements are identified from security tests and exercises, including those",
+      "description": "o ID.IM-02: Improvements are identified from security tests and exercises, including those",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.IM-02: Improvements are identified from security tests and exercises, including those",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "improvements",
+        "identified",
+        "tests",
+        "exercises",
+        "including",
+        "those"
+      ]
+    },
+    {
+      "framework": "CIS Controls",
+      "version": "8.1",
+      "control_id": "CIS 5",
+      "title": "controls from SP 800-5 3, Security and Privacy Controls for Information Systems and",
+      "description": "controls from SP 800-5 3, Security and Privacy Controls for Information Systems and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: controls from SP 800-5 3, Security and Privacy Controls for Information Systems and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "privacy",
+        "information",
+        "systems"
+      ]
+    },
+    {
+      "framework": "CIS Controls",
+      "version": "8.1",
+      "control_id": "CIS 53",
+      "title": "800-53, S ecurity and Privacy Controls for Information Systems and Organizations , may be one of",
+      "description": "800-53, S ecurity and Privacy Controls for Information Systems and Organizations , may be one of",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: 800-53, S ecurity and Privacy Controls for Information Systems and Organizations , may be one of",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "ecurity",
+        "privacy",
+        "information",
+        "systems",
+        "organizations"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.AE-03",
+      "title": "o DE.AE-03: Information is correlated from multiple sources",
+      "description": "o DE.AE-03: Information is correlated from multiple sources",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o DE.AE-03: Information is correlated from multiple sources",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "information",
+        "correlated",
+        "multiple",
+        "sources"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.AE-04",
+      "title": "o DE.AE-04: The estimated impact and scope of adverse events are understood",
+      "description": "o DE.AE-04: The estimated impact and scope of adverse events are understood",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o DE.AE-04: The estimated impact and scope of adverse events are understood",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "estimated",
+        "impact",
+        "scope",
+        "adverse",
+        "events",
+        "understood"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.AE-06",
+      "title": "o DE.AE-06: Information on adverse events is provided to authorized staff and tools",
+      "description": "o DE.AE-06: Information on adverse events is provided to authorized staff and tools",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o DE.AE-06: Information on adverse events is provided to authorized staff and tools",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "information",
+        "adverse",
+        "events",
+        "provided",
+        "authorized",
+        "staff",
+        "tools"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.AE-07",
+      "title": "o DE.AE-07: Cyber threat intelligence and other contextual information are integrated into",
+      "description": "o DE.AE-07: Cyber threat intelligence and other contextual information are integrated into",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o DE.AE-07: Cyber threat intelligence and other contextual information are integrated into",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cyber",
+        "threat",
+        "intelligence",
+        "other",
+        "contextual",
+        "information",
+        "integrated",
+        "into"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.AE-08",
+      "title": "o DE.AE-08: Incidents are declared when adverse events meet the defined incident",
+      "description": "o DE.AE-08: Incidents are declared when adverse events meet the defined incident",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o DE.AE-08: Incidents are declared when adverse events meet the defined incident",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incidents",
+        "declared",
+        "when",
+        "adverse",
+        "events",
+        "meet",
+        "defined",
+        "incident"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.CM-01",
+      "title": "o DE.CM-01: Networks and network services are monitored to find potentially adverse",
+      "description": "o DE.CM-01: Networks and network services are monitored to find potentially adverse",
+      "category": "Network Security",
+      "recommendation": "Implement control intent: o DE.CM-01: Networks and network services are monitored to find potentially adverse",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "networks",
+        "network",
+        "services",
+        "monitored",
+        "find",
+        "potentially",
+        "adverse"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.CM-02",
+      "title": "o DE.CM-02: The physical environment is monitored to find potentially adverse events",
+      "description": "o DE.CM-02: The physical environment is monitored to find potentially adverse events",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o DE.CM-02: The physical environment is monitored to find potentially adverse events",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "physical",
+        "environment",
+        "monitored",
+        "find",
+        "potentially",
+        "adverse",
+        "events"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.CM-03",
+      "title": "o DE.CM-03: Personnel activity and technology usage are monitored to find potentially",
+      "description": "o DE.CM-03: Personnel activity and technology usage are monitored to find potentially",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o DE.CM-03: Personnel activity and technology usage are monitored to find potentially",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "personnel",
+        "activity",
+        "technology",
+        "usage",
+        "monitored",
+        "find",
+        "potentially"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.CM-06",
+      "title": "o DE.CM-06: External service provider activities and services are monitored to find",
+      "description": "o DE.CM-06: External service provider activities and services are monitored to find",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o DE.CM-06: External service provider activities and services are monitored to find",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "external",
+        "service",
+        "provider",
+        "activities",
+        "services",
+        "monitored",
+        "find"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "DE.CM-09",
+      "title": "o DE.CM-09: Computing hardware and software, runtime environments, and their data",
+      "description": "o DE.CM-09: Computing hardware and software, runtime environments, and their data",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o DE.CM-09: Computing hardware and software, runtime environments, and their data",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "computing",
+        "hardware",
+        "software",
+        "runtime",
+        "environments",
+        "their",
+        "data"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OC-01",
+      "title": "o GV.OC-01: The organizational mission is understood and informs cybersecurity risk",
+      "description": "o GV.OC-01: The organizational mission is understood and informs cybersecurity risk",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OC-01: The organizational mission is understood and informs cybersecurity risk",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "organizational",
+        "mission",
+        "understood",
+        "informs",
+        "cybersecurity",
+        "risk"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OC-02",
+      "title": "o GV.OC-02: Internal and external stakeholders are understood, and their needs and",
+      "description": "o GV.OC-02: Internal and external stakeholders are understood, and their needs and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OC-02: Internal and external stakeholders are understood, and their needs and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "internal",
+        "external",
+        "stakeholders",
+        "understood",
+        "their",
+        "needs"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OC-03",
+      "title": "o GV.OC-03: Legal, regulatory, and contractual requirements regarding cybersecurity —",
+      "description": "o GV.OC-03: Legal, regulatory, and contractual requirements regarding cybersecurity —",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OC-03: Legal, regulatory, and contractual requirements regarding cybersecurity —",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "legal",
+        "regulatory",
+        "contractual",
+        "requirements",
+        "regarding",
+        "cybersecurity"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OC-04",
+      "title": "o GV.OC-04: Critical objectives, capabilities, and services that external stakeholders",
+      "description": "o GV.OC-04: Critical objectives, capabilities, and services that external stakeholders",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OC-04: Critical objectives, capabilities, and services that external stakeholders",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "critical",
+        "objectives",
+        "capabilities",
+        "services",
+        "external",
+        "stakeholders"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OC-05",
+      "title": "o GV.OC-05: Outcomes, capabilities, and services that the organization depends on are",
+      "description": "o GV.OC-05: Outcomes, capabilities, and services that the organization depends on are",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OC-05: Outcomes, capabilities, and services that the organization depends on are",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "outcomes",
+        "capabilities",
+        "services",
+        "organization",
+        "depends"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OV-01",
+      "title": "o GV.OV-01: Cybersecurity risk management strategy outcomes are reviewed to inform",
+      "description": "o GV.OV-01: Cybersecurity risk management strategy outcomes are reviewed to inform",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OV-01: Cybersecurity risk management strategy outcomes are reviewed to inform",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "risk",
+        "management",
+        "strategy",
+        "outcomes",
+        "reviewed",
+        "inform"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OV-02",
+      "title": "o GV.OV-02: The cybersecurity risk management strategy is reviewed and adjusted to",
+      "description": "o GV.OV-02: The cybersecurity risk management strategy is reviewed and adjusted to",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OV-02: The cybersecurity risk management strategy is reviewed and adjusted to",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "risk",
+        "management",
+        "strategy",
+        "reviewed",
+        "adjusted"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.OV-03",
+      "title": "o GV.OV-03: Organizational cybersecurity risk management performance is evaluated and",
+      "description": "o GV.OV-03: Organizational cybersecurity risk management performance is evaluated and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.OV-03: Organizational cybersecurity risk management performance is evaluated and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "organizational",
+        "cybersecurity",
+        "risk",
+        "management",
+        "performance",
+        "evaluated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.PO-01",
+      "title": "o GV.PO-01: Policy for managing cybersecurity risks is established based on organizational",
+      "description": "o GV.PO-01: Policy for managing cybersecurity risks is established based on organizational",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.PO-01: Policy for managing cybersecurity risks is established based on organizational",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "policy",
+        "managing",
+        "cybersecurity",
+        "risks",
+        "established",
+        "based",
+        "organizational"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.PO-02",
+      "title": "o GV.PO-02: Policy for managing cybersecurity risks is reviewed, updated, communicated,",
+      "description": "o GV.PO-02: Policy for managing cybersecurity risks is reviewed, updated, communicated,",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.PO-02: Policy for managing cybersecurity risks is reviewed, updated, communicated,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "policy",
+        "managing",
+        "cybersecurity",
+        "risks",
+        "reviewed",
+        "updated",
+        "communicated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-01",
+      "title": "o GV.RM-01: Risk management objectives are established and agreed to by organizational",
+      "description": "o GV.RM-01: Risk management objectives are established and agreed to by organizational",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RM-01: Risk management objectives are established and agreed to by organizational",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "risk",
+        "management",
+        "objectives",
+        "established",
+        "agreed",
+        "organizational"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-02",
+      "title": "o GV.RM-02: Risk appetite and risk tolerance statements are established, communicated,",
+      "description": "o GV.RM-02: Risk appetite and risk tolerance statements are established, communicated,",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RM-02: Risk appetite and risk tolerance statements are established, communicated,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "risk",
+        "appetite",
+        "tolerance",
+        "statements",
+        "established",
+        "communicated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-03",
+      "title": "o GV.RM-03: Cybersecurity risk management activities and outcomes are included in",
+      "description": "o GV.RM-03: Cybersecurity risk management activities and outcomes are included in",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RM-03: Cybersecurity risk management activities and outcomes are included in",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "risk",
+        "management",
+        "activities",
+        "outcomes",
+        "included"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-04",
+      "title": "o GV.RM-04: Strategic direction that describes appropriate risk response options is",
+      "description": "o GV.RM-04: Strategic direction that describes appropriate risk response options is",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o GV.RM-04: Strategic direction that describes appropriate risk response options is",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "strategic",
+        "direction",
+        "describes",
+        "appropriate",
+        "risk",
+        "response",
+        "options"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-05",
+      "title": "o GV.RM-05: Lines of communication across the organization are established for",
+      "description": "o GV.RM-05: Lines of communication across the organization are established for",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RM-05: Lines of communication across the organization are established for",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "lines",
+        "communication",
+        "across",
+        "organization",
+        "established"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-06",
+      "title": "o GV.RM-06: A standardized method for calculating, documenting, categorizing, and",
+      "description": "o GV.RM-06: A standardized method for calculating, documenting, categorizing, and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RM-06: A standardized method for calculating, documenting, categorizing, and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "standardized",
+        "method",
+        "calculating",
+        "documenting",
+        "categorizing"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RM-07",
+      "title": "o GV.RM-07: Strategic opportunities (i.e., positive risks) are characterized and are",
+      "description": "o GV.RM-07: Strategic opportunities (i.e., positive risks) are characterized and are",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RM-07: Strategic opportunities (i.e., positive risks) are characterized and are",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "strategic",
+        "opportunities",
+        "positive",
+        "risks",
+        "characterized"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RR-01",
+      "title": "o GV.RR-01: Organizational leadership is responsible and accountable for cybersecurity",
+      "description": "o GV.RR-01: Organizational leadership is responsible and accountable for cybersecurity",
+      "category": "Access Control",
+      "recommendation": "Implement control intent: o GV.RR-01: Organizational leadership is responsible and accountable for cybersecurity",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "organizational",
+        "leadership",
+        "responsible",
+        "accountable",
+        "cybersecurity"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RR-02",
+      "title": "o GV.RR-02: Roles, responsibilities, and authorities related to cybersecurity risk",
+      "description": "o GV.RR-02: Roles, responsibilities, and authorities related to cybersecurity risk",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RR-02: Roles, responsibilities, and authorities related to cybersecurity risk",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "roles",
+        "responsibilities",
+        "authorities",
+        "related",
+        "cybersecurity",
+        "risk"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RR-03",
+      "title": "o GV.RR-03: Adequate resources are allocated commensurate with the cybersecurity risk",
+      "description": "o GV.RR-03: Adequate resources are allocated commensurate with the cybersecurity risk",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RR-03: Adequate resources are allocated commensurate with the cybersecurity risk",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "adequate",
+        "resources",
+        "allocated",
+        "commensurate",
+        "cybersecurity",
+        "risk"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.RR-04",
+      "title": "o GV.RR-04: Cybersecurity is included in human resources practices",
+      "description": "o GV.RR-04: Cybersecurity is included in human resources practices",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.RR-04: Cybersecurity is included in human resources practices",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "included",
+        "human",
+        "resources",
+        "practices"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-01",
+      "title": "o GV.SC-01: A cybersecurity supply chain risk management program, strategy, objectives,",
+      "description": "o GV.SC-01: A cybersecurity supply chain risk management program, strategy, objectives,",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-01: A cybersecurity supply chain risk management program, strategy, objectives,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "supply",
+        "chain",
+        "risk",
+        "management",
+        "program",
+        "strategy",
+        "objectives"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-02",
+      "title": "o GV.SC-02: Cybersecurity roles and responsibilities for suppliers, customers, and partners",
+      "description": "o GV.SC-02: Cybersecurity roles and responsibilities for suppliers, customers, and partners",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-02: Cybersecurity roles and responsibilities for suppliers, customers, and partners",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "roles",
+        "responsibilities",
+        "suppliers",
+        "customers",
+        "partners"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-03",
+      "title": "o GV.SC-03: Cybersecurity supply chain risk management is integrated into cybersecurity",
+      "description": "o GV.SC-03: Cybersecurity supply chain risk management is integrated into cybersecurity",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-03: Cybersecurity supply chain risk management is integrated into cybersecurity",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "supply",
+        "chain",
+        "risk",
+        "management",
+        "integrated",
+        "into"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-04",
+      "title": "o GV.SC-04: Suppliers are known and prioritized by criticality",
+      "description": "o GV.SC-04: Suppliers are known and prioritized by criticality",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-04: Suppliers are known and prioritized by criticality",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "suppliers",
+        "known",
+        "prioritized",
+        "criticality"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-05",
+      "title": "o GV.SC-05: Requirements to address cybersecurity risks in supply chains are established,",
+      "description": "o GV.SC-05: Requirements to address cybersecurity risks in supply chains are established,",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-05: Requirements to address cybersecurity risks in supply chains are established,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "requirements",
+        "address",
+        "cybersecurity",
+        "risks",
+        "supply",
+        "chains",
+        "established"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-06",
+      "title": "o GV.SC-06: Planning and due diligence are performed to reduce risks before entering into",
+      "description": "o GV.SC-06: Planning and due diligence are performed to reduce risks before entering into",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-06: Planning and due diligence are performed to reduce risks before entering into",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "planning",
+        "diligence",
+        "performed",
+        "reduce",
+        "risks",
+        "before",
+        "entering",
+        "into"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-07",
+      "title": "o GV.SC-07: The risks posed by a supplier, their products and services, and other third",
+      "description": "o GV.SC-07: The risks posed by a supplier, their products and services, and other third",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-07: The risks posed by a supplier, their products and services, and other third",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "risks",
+        "posed",
+        "supplier",
+        "their",
+        "products",
+        "services",
+        "other",
+        "third"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-08",
+      "title": "o GV.SC-08: Relevant suppliers and other third parties are included in incident planning,",
+      "description": "o GV.SC-08: Relevant suppliers and other third parties are included in incident planning,",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o GV.SC-08: Relevant suppliers and other third parties are included in incident planning,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "relevant",
+        "suppliers",
+        "other",
+        "third",
+        "parties",
+        "included",
+        "incident",
+        "planning"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-09",
+      "title": "o GV.SC-09: Supply chain security practices are integrated into cybersecurity and",
+      "description": "o GV.SC-09: Supply chain security practices are integrated into cybersecurity and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-09: Supply chain security practices are integrated into cybersecurity and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "supply",
+        "chain",
+        "practices",
+        "integrated",
+        "into",
+        "cybersecurity"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "GV.SC-10",
+      "title": "o GV.SC-10: Cybersecurity supply chain risk management plans include provisions for",
+      "description": "o GV.SC-10: Cybersecurity supply chain risk management plans include provisions for",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o GV.SC-10: Cybersecurity supply chain risk management plans include provisions for",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cybersecurity",
+        "supply",
+        "chain",
+        "risk",
+        "management",
+        "plans",
+        "include",
+        "provisions"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-01",
+      "title": "o ID.AM-01: Inventories of hardware managed by the organization are maintained",
+      "description": "o ID.AM-01: Inventories of hardware managed by the organization are maintained",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.AM-01: Inventories of hardware managed by the organization are maintained",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "inventories",
+        "hardware",
+        "managed",
+        "organization",
+        "maintained"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-02",
+      "title": "o ID.AM-02: Inventories of software, services, and systems managed by the organization",
+      "description": "o ID.AM-02: Inventories of software, services, and systems managed by the organization",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.AM-02: Inventories of software, services, and systems managed by the organization",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "inventories",
+        "software",
+        "services",
+        "systems",
+        "managed",
+        "organization"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-03",
+      "title": "o ID.AM-03: Representations of the organization’s authorized network communication",
+      "description": "o ID.AM-03: Representations of the organization’s authorized network communication",
+      "category": "Network Security",
+      "recommendation": "Implement control intent: o ID.AM-03: Representations of the organization’s authorized network communication",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "representations",
+        "organization",
+        "authorized",
+        "network",
+        "communication"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-04",
+      "title": "o ID.AM-04: Inventories of services provided by suppliers are maintained",
+      "description": "o ID.AM-04: Inventories of services provided by suppliers are maintained",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.AM-04: Inventories of services provided by suppliers are maintained",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "inventories",
+        "services",
+        "provided",
+        "suppliers",
+        "maintained"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-05",
+      "title": "o ID.AM-05: Assets are prioritized based on classification, criticality, resources, and",
+      "description": "o ID.AM-05: Assets are prioritized based on classification, criticality, resources, and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.AM-05: Assets are prioritized based on classification, criticality, resources, and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "assets",
+        "prioritized",
+        "based",
+        "classification",
+        "criticality",
+        "resources"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-07",
+      "title": "o ID.AM-07: Inventories of data and corresponding metadata for designated data types",
+      "description": "o ID.AM-07: Inventories of data and corresponding metadata for designated data types",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.AM-07: Inventories of data and corresponding metadata for designated data types",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "inventories",
+        "data",
+        "corresponding",
+        "metadata",
+        "designated",
+        "types"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.AM-08",
+      "title": "o ID.AM-08: Systems, hardware, software, services, and data are managed throughout",
+      "description": "o ID.AM-08: Systems, hardware, software, services, and data are managed throughout",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.AM-08: Systems, hardware, software, services, and data are managed throughout",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "systems",
+        "hardware",
+        "software",
+        "services",
+        "data",
+        "managed",
+        "throughout"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.IM-02",
+      "title": "o ID.IM-02: Improvements are identified from security tests and exercises, including those",
+      "description": "o ID.IM-02: Improvements are identified from security tests and exercises, including those",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.IM-02: Improvements are identified from security tests and exercises, including those",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "improvements",
+        "identified",
+        "tests",
+        "exercises",
+        "including",
+        "those"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.IM-03",
+      "title": "o ID.IM-03: Improvements are identified from execution of operational processes,",
+      "description": "o ID.IM-03: Improvements are identified from execution of operational processes,",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.IM-03: Improvements are identified from execution of operational processes,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "improvements",
+        "identified",
+        "execution",
+        "operational",
+        "processes"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.IM-04",
+      "title": "o ID.IM-04: Incident response plans and other cybersecurity plans that affect operations",
+      "description": "o ID.IM-04: Incident response plans and other cybersecurity plans that affect operations",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o ID.IM-04: Incident response plans and other cybersecurity plans that affect operations",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incident",
+        "response",
+        "plans",
+        "other",
+        "cybersecurity",
+        "affect",
+        "operations"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-02",
+      "title": "o ID.RA-02: Cyber threat intelligence is received from information sharing forums and",
+      "description": "o ID.RA-02: Cyber threat intelligence is received from information sharing forums and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-02: Cyber threat intelligence is received from information sharing forums and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "cyber",
+        "threat",
+        "intelligence",
+        "received",
+        "information",
+        "sharing",
+        "forums"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-03",
+      "title": "o ID.RA-03: Internal and external threats to the organization are identified and recorded",
+      "description": "o ID.RA-03: Internal and external threats to the organization are identified and recorded",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-03: Internal and external threats to the organization are identified and recorded",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "internal",
+        "external",
+        "threats",
+        "organization",
+        "identified",
+        "recorded"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-04",
+      "title": "o ID.RA-04: Potential impacts and likelihoods of threats exploiting vulnerabilities are",
+      "description": "o ID.RA-04: Potential impacts and likelihoods of threats exploiting vulnerabilities are",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-04: Potential impacts and likelihoods of threats exploiting vulnerabilities are",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "potential",
+        "impacts",
+        "likelihoods",
+        "threats",
+        "exploiting",
+        "vulnerabilities"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-05",
+      "title": "o ID.RA-05: Threats, vulnerabilities, likelihoods, and impacts are used to understand",
+      "description": "o ID.RA-05: Threats, vulnerabilities, likelihoods, and impacts are used to understand",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-05: Threats, vulnerabilities, likelihoods, and impacts are used to understand",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "threats",
+        "vulnerabilities",
+        "likelihoods",
+        "impacts",
+        "used",
+        "understand"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-06",
+      "title": "o ID.RA-06: Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "description": "o ID.RA-06: Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o ID.RA-06: Risk responses are chosen, prioritized, planned, tracked, and communicated",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "risk",
+        "responses",
+        "chosen",
+        "prioritized",
+        "planned",
+        "tracked",
+        "communicated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-07",
+      "title": "o ID.RA-07: Changes and exceptions are managed, assessed for risk impact, recorded, and",
+      "description": "o ID.RA-07: Changes and exceptions are managed, assessed for risk impact, recorded, and",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-07: Changes and exceptions are managed, assessed for risk impact, recorded, and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "changes",
+        "exceptions",
+        "managed",
+        "assessed",
+        "risk",
+        "impact",
+        "recorded"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-08",
+      "title": "o ID.RA-08: Processes for receiving, analyzing, and responding to vulnerability disclosures",
+      "description": "o ID.RA-08: Processes for receiving, analyzing, and responding to vulnerability disclosures",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-08: Processes for receiving, analyzing, and responding to vulnerability disclosures",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "processes",
+        "receiving",
+        "analyzing",
+        "responding",
+        "vulnerability",
+        "disclosures"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-09",
+      "title": "o ID.RA-09: The authenticity and integrity of hardware and software are assessed prior to",
+      "description": "o ID.RA-09: The authenticity and integrity of hardware and software are assessed prior to",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-09: The authenticity and integrity of hardware and software are assessed prior to",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "authenticity",
+        "integrity",
+        "hardware",
+        "software",
+        "assessed",
+        "prior"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "ID.RA-10",
+      "title": "o ID.RA-10: Critical suppliers are assessed prior to acquisition",
+      "description": "o ID.RA-10: Critical suppliers are assessed prior to acquisition",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o ID.RA-10: Critical suppliers are assessed prior to acquisition",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "critical",
+        "suppliers",
+        "assessed",
+        "prior",
+        "acquisition"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AA-01",
+      "title": "o PR.AA-01: Identities and credentials for authorized users, services, and hardware are",
+      "description": "o PR.AA-01: Identities and credentials for authorized users, services, and hardware are",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.AA-01: Identities and credentials for authorized users, services, and hardware are",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "identities",
+        "credentials",
+        "authorized",
+        "users",
+        "services",
+        "hardware"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AA-02",
+      "title": "o PR.AA-02: Identities are proofed and bound to credentials based on the context of",
+      "description": "o PR.AA-02: Identities are proofed and bound to credentials based on the context of",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.AA-02: Identities are proofed and bound to credentials based on the context of",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "identities",
+        "proofed",
+        "bound",
+        "credentials",
+        "based",
+        "context"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AA-03",
+      "title": "o PR.AA-03: Users, services, and hardware are authenticated",
+      "description": "o PR.AA-03: Users, services, and hardware are authenticated",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.AA-03: Users, services, and hardware are authenticated",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "users",
+        "services",
+        "hardware",
+        "authenticated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AA-04",
+      "title": "o PR.AA-04: Identity assertions are protected, conveyed, and verified",
+      "description": "o PR.AA-04: Identity assertions are protected, conveyed, and verified",
+      "category": "Access Control",
+      "recommendation": "Implement control intent: o PR.AA-04: Identity assertions are protected, conveyed, and verified",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "identity",
+        "assertions",
+        "protected",
+        "conveyed",
+        "verified"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AA-05",
+      "title": "o PR.AA-05: Access permissions, entitlements, and authorizations are defined in a policy,",
+      "description": "o PR.AA-05: Access permissions, entitlements, and authorizations are defined in a policy,",
+      "category": "Access Control",
+      "recommendation": "Implement control intent: o PR.AA-05: Access permissions, entitlements, and authorizations are defined in a policy,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "access",
+        "permissions",
+        "entitlements",
+        "authorizations",
+        "defined",
+        "policy"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AA-06",
+      "title": "o PR.AA-06: Physical access to assets is managed, monitored, and enforced",
+      "description": "o PR.AA-06: Physical access to assets is managed, monitored, and enforced",
+      "category": "Access Control",
+      "recommendation": "Implement control intent: o PR.AA-06: Physical access to assets is managed, monitored, and enforced",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "physical",
+        "access",
+        "assets",
+        "managed",
+        "monitored",
+        "enforced"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.AT-02",
+      "title": "o PR.AT-02: Individuals in specialized roles are provided with awareness and training so",
+      "description": "o PR.AT-02: Individuals in specialized roles are provided with awareness and training so",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.AT-02: Individuals in specialized roles are provided with awareness and training so",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "individuals",
+        "specialized",
+        "roles",
+        "provided",
+        "awareness",
+        "training"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.DS-02",
+      "title": "o PR.DS-02: The confidentiality, integrity, and availability of data-in-transit are protected",
+      "description": "o PR.DS-02: The confidentiality, integrity, and availability of data-in-transit are protected",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.DS-02: The confidentiality, integrity, and availability of data-in-transit are protected",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "confidentiality",
+        "integrity",
+        "availability",
+        "data",
+        "transit",
+        "protected"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.DS-10",
+      "title": "o PR.DS-10: The confidentiality, integrity, and availability of data-in-use are protected",
+      "description": "o PR.DS-10: The confidentiality, integrity, and availability of data-in-use are protected",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.DS-10: The confidentiality, integrity, and availability of data-in-use are protected",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "confidentiality",
+        "integrity",
+        "availability",
+        "data",
+        "protected"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.DS-11",
+      "title": "o PR.DS-11: Backups of data are created, protected, maintained, and tested",
+      "description": "o PR.DS-11: Backups of data are created, protected, maintained, and tested",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o PR.DS-11: Backups of data are created, protected, maintained, and tested",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "backups",
+        "data",
+        "created",
+        "protected",
+        "maintained",
+        "tested"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.IR-02",
+      "title": "o PR.IR-02: The organization’s technology assets are protected from environmental",
+      "description": "o PR.IR-02: The organization’s technology assets are protected from environmental",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o PR.IR-02: The organization’s technology assets are protected from environmental",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "organization",
+        "technology",
+        "assets",
+        "protected",
+        "environmental"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.IR-03",
+      "title": "o PR.IR-03: Mechanisms are implemented to achieve resilience requirements in normal",
+      "description": "o PR.IR-03: Mechanisms are implemented to achieve resilience requirements in normal",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.IR-03: Mechanisms are implemented to achieve resilience requirements in normal",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "mechanisms",
+        "implemented",
+        "achieve",
+        "resilience",
+        "requirements",
+        "normal"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.IR-04",
+      "title": "o PR.IR-04: Adequate resource capacity to ensure availability is maintained",
+      "description": "o PR.IR-04: Adequate resource capacity to ensure availability is maintained",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.IR-04: Adequate resource capacity to ensure availability is maintained",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "adequate",
+        "resource",
+        "capacity",
+        "ensure",
+        "availability",
+        "maintained"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.PS-02",
+      "title": "o PR.PS-02: Software is maintained, replaced, and removed commensurate with risk",
+      "description": "o PR.PS-02: Software is maintained, replaced, and removed commensurate with risk",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.PS-02: Software is maintained, replaced, and removed commensurate with risk",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "software",
+        "maintained",
+        "replaced",
+        "removed",
+        "commensurate",
+        "risk"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.PS-03",
+      "title": "o PR.PS-03: Hardware is maintained, replaced, and removed commensurate with risk",
+      "description": "o PR.PS-03: Hardware is maintained, replaced, and removed commensurate with risk",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.PS-03: Hardware is maintained, replaced, and removed commensurate with risk",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "hardware",
+        "maintained",
+        "replaced",
+        "removed",
+        "commensurate",
+        "risk"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.PS-04",
+      "title": "o PR.PS-04: Log records are generated and made available for continuous monitoring",
+      "description": "o PR.PS-04: Log records are generated and made available for continuous monitoring",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o PR.PS-04: Log records are generated and made available for continuous monitoring",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "records",
+        "generated",
+        "made",
+        "available",
+        "continuous",
+        "monitoring"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.PS-05",
+      "title": "o PR.PS-05: Installation and execution of unauthorized software are prevented",
+      "description": "o PR.PS-05: Installation and execution of unauthorized software are prevented",
+      "category": "Monitoring and Logging",
+      "recommendation": "Implement control intent: o PR.PS-05: Installation and execution of unauthorized software are prevented",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "installation",
+        "execution",
+        "unauthorized",
+        "software",
+        "prevented"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "PR.PS-06",
+      "title": "o PR.PS-06: Secure software development practices are integrated, and their performance",
+      "description": "o PR.PS-06: Secure software development practices are integrated, and their performance",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o PR.PS-06: Secure software development practices are integrated, and their performance",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "secure",
+        "software",
+        "development",
+        "practices",
+        "integrated",
+        "their",
+        "performance"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.CO-04",
+      "title": "o RC.CO-04: Public updates on incident recovery are shared using approved methods and",
+      "description": "o RC.CO-04: Public updates on incident recovery are shared using approved methods and",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RC.CO-04: Public updates on incident recovery are shared using approved methods and",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "public",
+        "updates",
+        "incident",
+        "recovery",
+        "shared",
+        "using",
+        "approved",
+        "methods"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.RP-01",
+      "title": "o RC.RP-01: The recovery portion of the incident response plan is executed once initiated",
+      "description": "o RC.RP-01: The recovery portion of the incident response plan is executed once initiated",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RC.RP-01: The recovery portion of the incident response plan is executed once initiated",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "recovery",
+        "portion",
+        "incident",
+        "response",
+        "plan",
+        "executed",
+        "once",
+        "initiated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.RP-02",
+      "title": "o RC.RP-02: Recovery actions are selected, scoped, prioritized, and performed",
+      "description": "o RC.RP-02: Recovery actions are selected, scoped, prioritized, and performed",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RC.RP-02: Recovery actions are selected, scoped, prioritized, and performed",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "recovery",
+        "actions",
+        "selected",
+        "scoped",
+        "prioritized",
+        "performed"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.RP-03",
+      "title": "o RC.RP-03: The integrity of backups and other restoration assets is verified before using",
+      "description": "o RC.RP-03: The integrity of backups and other restoration assets is verified before using",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RC.RP-03: The integrity of backups and other restoration assets is verified before using",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "integrity",
+        "backups",
+        "other",
+        "restoration",
+        "assets",
+        "verified",
+        "before",
+        "using"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.RP-04",
+      "title": "o RC.RP-04: Critical mission functions and cybersecurity risk management are considered",
+      "description": "o RC.RP-04: Critical mission functions and cybersecurity risk management are considered",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o RC.RP-04: Critical mission functions and cybersecurity risk management are considered",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "critical",
+        "mission",
+        "functions",
+        "cybersecurity",
+        "risk",
+        "management",
+        "considered"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.RP-05",
+      "title": "o RC.RP-05: The integrity of restored assets is verified, systems and services are restored,",
+      "description": "o RC.RP-05: The integrity of restored assets is verified, systems and services are restored,",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o RC.RP-05: The integrity of restored assets is verified, systems and services are restored,",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "integrity",
+        "restored",
+        "assets",
+        "verified",
+        "systems",
+        "services"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RC.RP-06",
+      "title": "o RC.RP-06: The end of incident recovery is declared based on criteria, and incident-",
+      "description": "o RC.RP-06: The end of incident recovery is declared based on criteria, and incident-",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RC.RP-06: The end of incident recovery is declared based on criteria, and incident-",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incident",
+        "recovery",
+        "declared",
+        "based",
+        "criteria"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.AN-06",
+      "title": "o RS.AN-06: Actions performed during an investigation are recorded, and the records’",
+      "description": "o RS.AN-06: Actions performed during an investigation are recorded, and the records’",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o RS.AN-06: Actions performed during an investigation are recorded, and the records’",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "actions",
+        "performed",
+        "during",
+        "investigation",
+        "recorded",
+        "records"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.AN-07",
+      "title": "o RS.AN-07: Incident data and metadata are collected, and their integrity and provenance",
+      "description": "o RS.AN-07: Incident data and metadata are collected, and their integrity and provenance",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.AN-07: Incident data and metadata are collected, and their integrity and provenance",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incident",
+        "data",
+        "metadata",
+        "collected",
+        "their",
+        "integrity",
+        "provenance"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.AN-08",
+      "title": "o RS.AN-08: An incident’s magnitude is estimated and validated",
+      "description": "o RS.AN-08: An incident’s magnitude is estimated and validated",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.AN-08: An incident’s magnitude is estimated and validated",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incident",
+        "magnitude",
+        "estimated",
+        "validated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.CO-03",
+      "title": "o RS.CO-03: Information is shared with designated internal and external stakeholders",
+      "description": "o RS.CO-03: Information is shared with designated internal and external stakeholders",
+      "category": "General Compliance",
+      "recommendation": "Implement control intent: o RS.CO-03: Information is shared with designated internal and external stakeholders",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "information",
+        "shared",
+        "designated",
+        "internal",
+        "external",
+        "stakeholders"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.MA-01",
+      "title": "o RS.MA-01: The incident response plan is executed in coordination with relevant third",
+      "description": "o RS.MA-01: The incident response plan is executed in coordination with relevant third",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.MA-01: The incident response plan is executed in coordination with relevant third",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incident",
+        "response",
+        "plan",
+        "executed",
+        "coordination",
+        "relevant",
+        "third"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.MA-02",
+      "title": "o RS.MA-02: Incident reports are triaged and validated",
+      "description": "o RS.MA-02: Incident reports are triaged and validated",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.MA-02: Incident reports are triaged and validated",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incident",
+        "reports",
+        "triaged",
+        "validated"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.MA-03",
+      "title": "o RS.MA-03: Incidents are categorized and prioritized",
+      "description": "o RS.MA-03: Incidents are categorized and prioritized",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.MA-03: Incidents are categorized and prioritized",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incidents",
+        "categorized",
+        "prioritized"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.MA-04",
+      "title": "o RS.MA-04: Incidents are escalated or elevated as needed",
+      "description": "o RS.MA-04: Incidents are escalated or elevated as needed",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.MA-04: Incidents are escalated or elevated as needed",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incidents",
+        "escalated",
+        "elevated",
+        "needed"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.MA-05",
+      "title": "o RS.MA-05: The criteria for initiating incident recovery are applied",
+      "description": "o RS.MA-05: The criteria for initiating incident recovery are applied",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.MA-05: The criteria for initiating incident recovery are applied",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "criteria",
+        "initiating",
+        "incident",
+        "recovery",
+        "applied"
+      ]
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "version": "2.0",
+      "control_id": "RS.MI-02",
+      "title": "o RS.MI-02: Incidents are eradicated",
+      "description": "o RS.MI-02: Incidents are eradicated",
+      "category": "Resilience and Response",
+      "recommendation": "Implement control intent: o RS.MI-02: Incidents are eradicated",
+      "source": "NIST.CSWP.29.pdf",
+      "tags": [
+        "incidents",
+        "eradicated"
+      ]
+    }
+  ]
+}

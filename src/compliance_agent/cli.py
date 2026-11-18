@@ -16,6 +16,7 @@ from compliance_agent.config import (
     default_model,
     load_environment,
 )
+from compliance_agent.control_db import build_catalog, catalog_metadata, default_catalog_path, search_controls
 from compliance_agent.engine import ComplianceScoringEngine
 from compliance_agent.evaluation import evaluate_dataset
 from compliance_agent.exporters import export_document
@@ -89,10 +90,58 @@ def main() -> None:
         help="Environment variable holding the API key.",
     )
 
+    framework_build_parser = subparsers.add_parser("framework-build", help="Extract controls from framework documents and build the Control DB snapshot.")
+    framework_build_parser.add_argument("--input", required=True, help="Path to framework document file or directory.")
+    framework_build_parser.add_argument("--output", help="Output JSON snapshot path. Defaults to COMPLIANCE_AGENT_CATALOG_PATH or datasets/framework_catalog/catalog.json.")
+
+    subparsers.add_parser("framework-status", help="Show metadata for the active framework Control DB snapshot.")
+
+    framework_search_parser = subparsers.add_parser("framework-search", help="Search controls in the active framework Control DB snapshot.")
+    framework_search_parser.add_argument("--query", required=True, help="Free-text control query.")
+    framework_search_parser.add_argument("--limit", type=int, default=10, help="Maximum controls to return.")
+
     args = parser.parse_args()
     command = args.command or "extract"
 
     try:
+        if command == "framework-build":
+            source_path = Path(args.input)
+            output_path = Path(args.output) if args.output else default_catalog_path()
+            snapshot = build_catalog(source_path, output_path)
+            _print_header("Framework Catalog Build")
+            _print_kv("Input", str(source_path))
+            _print_kv("Output", str(output_path))
+            _print_kv("Controls", str(len(snapshot.controls)))
+            _print_kv("Sources", str(len(snapshot.source_files)))
+            return
+
+        if command == "framework-status":
+            metadata = catalog_metadata()
+            _print_header("Framework Catalog Status")
+            _print_kv("Path", str(metadata["path"]))
+            _print_kv("Exists", "YES" if metadata["exists"] else "NO")
+            _print_kv("Controls", str(metadata["control_count"]))
+            if metadata["built_at"]:
+                _print_kv("Built at", str(metadata["built_at"]))
+            frameworks = metadata["frameworks"]
+            if frameworks:
+                print("Framework counts:")
+                for name, count in frameworks.items():
+                    print(f"- {name}: {count}")
+            return
+
+        if command == "framework-search":
+            controls = search_controls(args.query, limit=max(args.limit, 1))
+            _print_header("Framework Control Search")
+            _print_kv("Query", args.query)
+            _print_kv("Matches", str(len(controls)))
+            if controls:
+                for control in controls:
+                    print(f"- {control.framework} {control.control_id} ({control.version}) {control.title}")
+            else:
+                print("No controls matched the query.")
+            return
+
         if command == "score":
             input_path = (
                 Path(args.input_path)

@@ -4,6 +4,22 @@ Compliance Intelligence Platform is a Python-based compliance and security polic
 
 It is built for security, governance, and audit teams that need to turn policy language into structured, reviewable, and comparable compliance evidence.
 
+## Table of contents
+
+- [Why this project exists](#why-this-project-exists)
+- [Core platform capabilities](#core-platform-capabilities)
+- [Problem domain](#problem-domain)
+- [How it works](#how-it-works)
+- [Product features](#product-features)
+- [Project structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+- [How to run the application](#how-to-run-the-application)
+- [Supported output artifacts](#supported-output-artifacts)
+- [Validation and review behavior](#validation-and-review-behavior)
+- [Security notes](#security-notes)
+- [Current state](#current-state)
+
 ## Why this project exists
 
 Security policies are usually written for human review, not for automation. That creates several issues:
@@ -17,16 +33,17 @@ This project solves that by creating a repeatable compliance intelligence workfl
 
 ## Core platform capabilities
 
-The platform now includes the following layers:
+The platform includes the following layers:
 
 - Multi-document policy repository ingestion
+- Framework Control DB built from NIST/CIS source documents
 - Framework coverage matrix mapping
 - Conflict detection across extracted policy statements
 - Human review workflow with approval-state tracking
 - Report bundle generation for CSV, Excel, and PDF outputs
 - Executive risk scoring and posture evaluation
 - Streamlit dashboard for policy analysis and reporting
-- CLI execution for local policy extraction and validation
+- CLI execution for local policy extraction, framework catalog management, and validation
 
 ## Problem domain
 
@@ -36,6 +53,8 @@ The platform supports policy, standard, and control text from files such as:
 - `.pdf`
 - `.docx`
 - `.doc` on Windows when Word integration is available
+
+Framework source documents can additionally be provided as `.md`, `.json`, or `.csv`.
 
 It works best with documents that describe obligations, restrictions, security requirements, access constraints, logging rules, incident handling requirements, and other governance-based controls.
 
@@ -88,6 +107,7 @@ A scoring engine evaluates rule coverage, clarity, priority, and evidence qualit
 The project includes a Streamlit dashboard that provides a practical interface for:
 
 - Selecting a policy folder or file path
+- Selecting a NIST/CSF framework source folder
 - Running the compliance analysis
 - Viewing the requirements table
 - Seeing the risk score and risk level
@@ -97,7 +117,7 @@ The project includes a Streamlit dashboard that provides a practical interface f
 ## Project structure
 
 ```text
-Personal Project/
+Compliance_Agent/
     app.py
     .env.example
     datasets/
@@ -117,9 +137,11 @@ Key modules:
 - `src/compliance_agent/config.py`: environment and output configuration
 - `src/compliance_agent/llm.py`: OpenAI-compatible LLM client and error handling
 - `src/compliance_agent/pipeline.py`: orchestration for extraction, validation, and correction
-- `src/compliance_agent/models.py`: canonical requirement and document schema
+- `src/compliance_agent/models.py`: canonical requirement, control, and document schema
 - `src/compliance_agent/engine.py`: scoring and risk logic
 - `src/compliance_agent/repository.py`: multi-document repository ingestion
+- `src/compliance_agent/framework_ingest.py`: control extraction from framework source documents
+- `src/compliance_agent/control_db.py`: framework catalog build, load, metadata, and search
 - `src/compliance_agent/coverage.py`: coverage matrix generation
 - `src/compliance_agent/conflicts.py`: conflict detection
 - `src/compliance_agent/review.py`: human review queue and status tracking
@@ -144,7 +166,7 @@ Before running the project, make sure:
 
 ```powershell
 git clone <your-repo-url>
-cd "Personal Project"
+cd <your-project-folder>
 ```
 
 ### 2. Create a virtual environment
@@ -195,6 +217,7 @@ OPENAI_MODEL=gpt-4.1-mini
 OPENAI_BASE_URL=
 COMPLIANCE_AGENT_OUTPUT_DIR=C:\Users\your-user\Documents\ComplianceAgentOutputs
 COMPLIANCE_AGENT_API_KEY_ENV=OPENAI_API_KEY
+COMPLIANCE_AGENT_CATALOG_PATH=C:\Users\your-user\Documents\ComplianceAgentCatalog\catalog.json
 ```
 
 ## How to run the application
@@ -216,11 +239,28 @@ http://localhost:8001
 The dashboard includes:
 
 - A sidebar input for the security controls directory path
+- A sidebar input for the NIST/CSF framework directory path
 - Automatic file resolution from the selected directory
 - The extracted requirement table
 - Risk score and risk level cards
 - Validation and output path display
 - Coverage, conflicts, review queue, and reports tabs
+
+#### Dual-input dashboard flow
+
+The dashboard runs a two-source workflow in one click:
+
+1. **Security controls directory path**: points to company policy and security control inputs for requirement extraction.
+2. **NIST/CSF framework directory path**: points to framework source files used to build or refresh the framework Control DB snapshot before mapping starts.
+
+When **Run analysis** is clicked, the app performs these steps in sequence:
+
+1. Build or refresh the framework control catalog from the NIST/CSF path.
+2. Run policy requirement extraction and mapping from the security controls path.
+3. Generate and save `requirements.json` and `requirements.yaml`.
+4. Display the extracted control count, generated file locations, validation summary, and analysis tabs.
+
+This ensures the mapper uses an up-to-date framework reference library during every dashboard run.
 
 ### Run the CLI workflow
 
@@ -231,6 +271,34 @@ python -m compliance_agent extract --input .\datasets\evaluation\policies\access
 ```
 
 If no file path is provided, the CLI can prompt for one interactively.
+
+### Build the framework Control DB snapshot
+
+Build a JSON control catalog from CIS/NIST source documents:
+
+```powershell
+python -m compliance_agent framework-build --input .\datasets\framework_sources
+```
+
+Optionally write the snapshot to a specific location:
+
+```powershell
+python -m compliance_agent framework-build --input .\datasets\framework_sources --output .\datasets\framework_catalog\catalog.json
+```
+
+Check active catalog metadata:
+
+```powershell
+python -m compliance_agent framework-status
+```
+
+Search controls from the stored catalog:
+
+```powershell
+python -m compliance_agent framework-search --query "access enforcement" --limit 10
+```
+
+If `COMPLIANCE_AGENT_CATALOG_PATH` is not set, the snapshot is stored at `datasets/framework_catalog/catalog.json`.
 
 ### Run the tests
 
@@ -276,4 +344,4 @@ Ambiguous or weaker outputs are flagged for human review rather than silently ac
 
 ## Current state
 
-This project is now a full compliance intelligence platform rather than a single-purpose extraction script. It combines policy analysis, scoring, validation, reporting, and a dashboard in a single local workflow suitable for demo, internal review, and further extension into enterprise governance tooling.
+This project is now a full compliance intelligence platform rather than a single-purpose extraction script. It combines policy analysis, scoring, validation, reporting, framework catalog management, and a dashboard in a single local workflow suitable for demo, internal review, and further extension into enterprise governance tooling.

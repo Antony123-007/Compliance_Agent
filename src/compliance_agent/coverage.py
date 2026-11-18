@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from compliance_agent.control_db import load_framework_controls
 from compliance_agent.frameworks import FRAMEWORK_CATALOG
 
 
@@ -27,6 +28,7 @@ class CoverageRow:
 
 def build_coverage_matrix(documents: list[object]) -> list[dict[str, object]]:
     """Build a framework coverage table for all extracted requirements."""
+    framework_catalog = load_framework_controls(fallback=FRAMEWORK_CATALOG)
     coverage_by_framework: dict[tuple[str, str], set[str]] = {}
     for document in documents:
         for requirement in getattr(document, "requirements", []):
@@ -35,15 +37,9 @@ def build_coverage_matrix(documents: list[object]) -> list[dict[str, object]]:
                 coverage_by_framework.setdefault(key, set()).add(mapping.control_id)
 
     rows: list[CoverageRow] = []
-    for framework in set(item.framework for item in FRAMEWORK_CATALOG):
-        for version in sorted(
-            {item.version for item in FRAMEWORK_CATALOG if item.framework == framework}
-        ):
-            controls = [
-                item
-                for item in FRAMEWORK_CATALOG
-                if item.framework == framework and item.version == version
-            ]
+    for framework in set(item.framework for item in framework_catalog):
+        for version in sorted({item.version for item in framework_catalog if item.framework == framework}):
+            controls = [item for item in framework_catalog if item.framework == framework and item.version == version]
             key = (framework, version)
             covered_ids = coverage_by_framework.get(key, set())
             missing_ids = [

@@ -14,6 +14,7 @@ from compliance_agent.config import (
     load_environment,
 )
 from compliance_agent.conflicts import detect_conflicts
+from compliance_agent.control_db import build_catalog, default_catalog_path
 from compliance_agent.coverage import build_coverage_matrix
 from compliance_agent.engine import ComplianceScoringEngine
 from compliance_agent.exporters import export_document
@@ -52,6 +53,14 @@ def _resolve_input_file(raw_path: str) -> Path:
             f"No supported security control file was found in: {candidate}"
         )
     raise FileNotFoundError(f"Security controls path not found: {candidate}")
+
+def _resolve_framework_source(raw_path: str) -> Path:
+    candidate = Path(raw_path).expanduser().resolve()
+    if candidate.is_file() and candidate.suffix.lower() in {".pdf", ".docx", ".doc", ".txt", ".md", ".json", ".csv"}:
+        return candidate
+    if candidate.is_dir():
+        return candidate
+    raise FileNotFoundError(f"Framework source path not found or unsupported: {candidate}")    
 
 
 def _safe_repo_docs(path_value: str) -> list[object]:
@@ -126,12 +135,11 @@ def main() -> None:
         input_path_value = st.text_input(
             "Security controls directory path", value="datasets/evaluation/policies"
         )
+        framework_path_value = st.text_input("NIST/CSF framework directory path", value="datasets/framework_sources")
         run_clicked = st.button("Run analysis")
 
-    if not run_clicked and not input_path_value.strip():
-        st.info(
-            "Enter the directory path for the security controls file to start the analysis."
-        )
+    if not run_clicked and (not input_path_value.strip() or not framework_path_value.strip()):
+        st.info("Enter both the security controls path and NIST/CSF framework path to start the analysis.")
         return
 
     try:
@@ -140,9 +148,18 @@ def main() -> None:
         st.warning(str(exc))
         return
 
+    try:
+        framework_path = _resolve_framework_source(framework_path_value)
+    except FileNotFoundError as exc:
+        st.warning(str(exc))
+        return
+
     if run_clicked:
         try:
             output_dir = _default_output_dir(input_path)
+            with st.spinner("Building framework control catalog from the provided NIST/CSF source..."):
+                snapshot = build_catalog(framework_path, default_catalog_path())
+
             settings = LLMSettings(
                 model=default_model(),
                 api_key_env=default_api_key_env(),
@@ -165,6 +182,18 @@ def main() -> None:
 
             st.write("Input file:")
             st.code(str(input_path))
+            st.write("Framework source:")
+            st.code(str(framework_path))
+            st.write("Framework catalog build:")
+            st.code(
+                "\n".join(
+                    [
+                        f"Catalog path: {default_catalog_path()}",
+                        f"Controls extracted: {len(snapshot.controls)}",
+                        f"Source files processed: {len(snapshot.source_files)}",
+                    ]
+                )
+            )
             st.write("Generated files:")
             st.code(f"JSON: {json_path}\nYAML: {yaml_path}\nOutput dir: {output_dir}")
 
